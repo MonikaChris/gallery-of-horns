@@ -4,7 +4,7 @@ class Footer extends React.Component {
     render() {
         return (
             <>
-            <h6>{this.props.author}</h6>
+                <h6>{this.props.author}</h6>
             </>
         )
     }
