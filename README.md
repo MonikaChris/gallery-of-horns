@@ -17,8 +17,7 @@ Number and name of feature: Feature #1 Display Images
 
 Estimate of time needed to complete: 1 hour
 
-Start time: 8:50 - 9:20 (got map to work with JSON file and all content loads except for images)
+Times: 8:50pm - 9:20pm (got map to work with JSON file and all content loads except for images)
+8:00am - 9:00am (finally got images to load)
 
-Finish time:
-
-Actual time: needed
+Actual time: 1.5 hours
