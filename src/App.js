@@ -3,15 +3,18 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
+import Container from 'react-bootstrap/Container';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <Container className="App">
         <Header title={"Gallery of Horns"} />
-        <Main />
+        <Container id="main">
+          <Main />
+        </Container>
         <Footer author={"Page by Monika Davies"} />
-      </div>
+      </Container>
     );
   }
 }

@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#card {
+  border: solid .2rem pink;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
