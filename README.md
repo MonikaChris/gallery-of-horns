@@ -23,7 +23,7 @@ Times: 8:50pm - 9:20pm (got map to work with JSON file and all content loads exc
 Actual time: 1.5 hours
 
 
-Feature #2 Allow users to vote for their favorite beast
+Feature #2: Allow users to vote for their favorite beast
 
 Estimate time needed to complete: 40 minutes
 
@@ -36,3 +36,14 @@ Switched back to arrow functions and tried a few different ways to bind "this" a
 behavior, but not sure if this is the optimal solution.
 
 Actual time: 50 minutes
+
+
+Feature #3: Bootstrap
+
+Estimate time needed to complete: 1.5 hours
+
+Start Time: 4:29 PM
+
+End Time: 5:25 PM
+
+Actual Time: 54 minutes
