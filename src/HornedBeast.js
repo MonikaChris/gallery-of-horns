@@ -7,7 +7,6 @@ class HornedBeast extends React.Component {
         this.state = {
             favorites: 0
         }
-        this.incrementFav = this.incrementFav.bind(this);
     };
 
 
