@@ -16,10 +16,11 @@ class HornedBeast extends React.Component {
             favorites: prevState.favorites + 1
         }));
     }
+    
 
     render() {
         return (
-            <Card style={{ width: '18rem' }} id='card'>
+            <Card style={{ width: '18rem' }} id="card">
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Img 
