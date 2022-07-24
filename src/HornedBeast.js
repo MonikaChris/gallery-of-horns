@@ -20,12 +20,14 @@ class HornedBeast extends React.Component {
         return (
             <Card style={{ width: '18rem' }} id='card'>
                 <Card.Body>
-                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Title onClick={this.incrementFav}>
+                        {this.props.title}
+                    </Card.Title>
                     <Card.Img 
                         src={this.props.image_url} 
                         alt={this.props.description} 
                         style={{height: '20rem'}}
-                        onClick={this.incrementFav}/>
+                        onClick={this.props.openModal}/>
                     <Card.Text>{this.props.description}</Card.Text>
                     <Card.Text>💕: {this.state.favorites}</Card.Text>
                 </Card.Body>

@@ -17,6 +17,7 @@ class Main extends React.Component {
                                 title={beast.title}
                                 image_url={beast.image_url}
                                 description={beast.description}
+                                openModal={this.props.openModal}
                             />
                         </Col>
                     )}
