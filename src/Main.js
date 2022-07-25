@@ -14,6 +14,7 @@ class Main extends React.Component {
                     {this.props.beastData.map(beast =>
                         <Col>
                             <HornedBeast
+                                key={beast._id}
                                 title={beast.title}
                                 image_url={beast.image_url}
                                 description={beast.description}

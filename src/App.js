@@ -8,11 +8,16 @@ import data from './data.json';
 import SelectedBeast from './SelectedBeast';
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      beastData : data,
-      showModal: false
+      beastData: data,
+      showModal: false,
+      displayBeast: {
+        title: null,
+        image_url: null,
+        description: null
+      }
     }
   }
 
@@ -20,24 +25,32 @@ class App extends React.Component {
     this.setState({ showModal: false });
   }
 
-  openModal = () => {
-    this.setState({ showModal: true });
+  openModal = (beastTitle, beastImage_url, beastDescription) => {
+    this.setState({
+      showModal: true,
+      displayBeast: {
+        title: beastTitle,
+        image_url: beastImage_url,
+        description: beastDescription
+      }
+    });
   }
-  
+
   render() {
     return (
       <Container className="App">
         <Header title={"Gallery of Horns"} />
         <Container id="main">
-          <Main 
+          <Main
             beastData={this.state.beastData}
             openModal={this.openModal}
-            />
+          />
         </Container>
-        <SelectedBeast 
+        <SelectedBeast
           showModal={this.state.showModal}
           closeModal={this.closeModal}
-          />
+          beast={this.state.displayBeast}
+        />
         <Footer author={"Page by Monika Davies"} />
       </Container>
     );
