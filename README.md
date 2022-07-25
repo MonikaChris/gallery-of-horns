@@ -47,3 +47,9 @@ Start Time: 4:29 PM
 End Time: 5:25 PM
 
 Actual Time: 54 minutes
+
+
+Lab 03:
+
+Feature 1: Display a Modal
+Total time: About 4 hours
