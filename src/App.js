@@ -4,14 +4,13 @@ import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
 import Container from 'react-bootstrap/Container';
-import data from './data.json';
+import beastData from './data.json';
 import SelectedBeast from './SelectedBeast';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      beastData: data,
       showModal: false,
       displayBeast: {
         title: null,
@@ -42,7 +41,7 @@ class App extends React.Component {
         <Header title={"Gallery of Horns"} />
         <Container id="main">
           <Main
-            beastData={this.state.beastData}
+            beastData={beastData}
             openModal={this.openModal}
           />
         </Container>
