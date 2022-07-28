@@ -27,7 +27,7 @@ class HornedBeast extends React.Component {
                         src={this.props.image_url} 
                         alt={this.props.description} 
                         style={{height: '20rem'}}
-                        onClick={() => this.props.openModal(this.props.title, this.props.image_url, this.props.description)}/>
+                        onClick={() => this.props.openModal(this.props.title)}/>
                     <Card.Text>{this.props.description}</Card.Text>
                     <Card.Text>💕: {this.state.favorites}</Card.Text>
                 </Card.Body>
