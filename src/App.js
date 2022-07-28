@@ -6,54 +6,59 @@ import Main from './Main';
 import Container from 'react-bootstrap/Container';
 import beastData from './data.json';
 import SelectedBeast from './SelectedBeast';
+import HornFilter from './HornFilter';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showModal: false,
-      displayBeast: {
-        title: null,
-        image_url: null,
-        description: null
+      modalBeast: {},
+      beastsToDisplay: beastData
       }
     }
-  }
+  
 
   closeModal = () => {
     this.setState({ showModal: false });
   }
 
-  openModal = (beastTitle, beastImage_url, beastDescription) => {
+  openModal = (beastTitle) => {
+    const modalPic = beastData.find(beast => beast.title === beastTitle);
+    
     this.setState({
       showModal: true,
-      displayBeast: {
-        title: beastTitle,
-        image_url: beastImage_url,
-        description: beastDescription
-      }
+      modalBeast: modalPic
     });
+  }
+
+  numHorns = (horns) => {
+    if (horns !== 'all') {
+      const numHorns = beastData.filter(beast => beast.horns === Number(horns));
+      this.setState({ beastsToDisplay : numHorns});
+    }
+
+    else this.setState({beastsToDisplay : beastData});
   }
 
   render() {
     return (
       <Container className="App">
         <Header title={"Gallery of Horns"} />
-        <Container id="main">
-          <Main
-            beastData={beastData}
-            openModal={this.openModal}
-          />
-        </Container>
+        <HornFilter numHorns={this.numHorns} />
+        <Main
+          beastData={this.state.beastsToDisplay}
+          openModal={this.openModal}
+        />
         <SelectedBeast
           showModal={this.state.showModal}
           closeModal={this.closeModal}
-          beast={this.state.displayBeast}
+          beast={this.state.modalBeast}
         />
         <Footer author={"Page by Monika Davies"} />
       </Container>
-    );
-  }
+    )
+    }  
 }
 
 export default App;
